@@ -1,0 +1,345 @@
+@charset "UTF-8";
+.block01 {
+  width: 100%;
+  height: 910px;
+  position: relative;
+  overflow: hidden;
+}
+.block01 .top {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.block01 .logo_wrpa {
+  width: 503px;
+  height: 523px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  z-index: 100;
+  top: 20%;
+}
+.block01 .logoBlock {
+  width: 503px;
+  height: 523px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  background: url("../images/logo.png") no-repeat center top;
+  overflow: hidden;
+}
+.block01 .logoBlock .logo_sub {
+  width: 100%;
+  height: auto;
+  display: block;
+  color: white;
+  font-size: 22px;
+  letter-spacing: 10px;
+  margin: 465px auto 0 auto;
+  text-align: center;
+}
+.block01 .logoBlock .logo_line {
+  width: 105px;
+  height: 2px;
+  display: block;
+  background: #d5492e;
+  margin: 25px auto 0 auto;
+}
+.block01 .button a {
+  width: 88px;
+  height: 88px;
+  position: relative;
+  background: #ccc;
+  display: block;
+  z-index: 20;
+  border-radius: 500px;
+  border: 2px solid white;
+  cursor: pointer;
+  margin: 250px auto 0 auto;
+  background: url("../images/down.png") no-repeat center;
+}
+
+.block02 {
+  width: 100%;
+  height: 100%;
+  background: url("../images/middle_bg.png") no-repeat center;
+  position: relative;
+}
+.block02 .content {
+  padding-top: 100px;
+  max-width: 1680px;
+  min-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+.block02 .content .left {
+  width: 800px;
+  height: 780px;
+  float: left;
+  position: relative;
+}
+.block02 .content .left .phoneBg {
+  width: 800px;
+  height: 780px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.block02 .content .left .phoneBg01 {
+  background: url("../images/iphone_game-visual01.png") no-repeat top center;
+  background-size: 95%;
+}
+.block02 .content .left .phoneBg02 {
+  background: url("../images/iphone_game-visual02.png") no-repeat top center;
+  background-size: 95%;
+  left: -218px;
+}
+.block02 .content .left .phoneBg03 {
+  background: url("../images/iphone_game-visual03.png") no-repeat top center;
+  background-size: 95%;
+  left: -436px;
+}
+.block02 .content .left .btn {
+  width: 476px;
+  height: 106px;
+  border-radius: 5000px;
+  display: block;
+  font-size: 35px;
+  font-family: '苹方-简';
+  line-height: 106px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 670px;
+  border: 2px solid black;
+  color: black;
+  transition: all 0.5s;
+  text-decoration: none;
+  cursor: pointer;
+}
+.block02 .content .left .btn:hover {
+  background: #000;
+  color: #fff;
+}
+.block02 .content .right {
+  width: 640px;
+  height: initial;
+  float: left;
+  color: #000;
+  margin-top: 50px;
+}
+.block02 .content .right .title {
+  width: 100%;
+  height: auto;
+  font-size: 100px;
+  font-family: '苹方-简';
+  font-weight: 500;
+  text-align: left;
+}
+.block02 .content .right .word {
+  width: 100%;
+  height: auto;
+  font-size: 30px;
+  font-family: '苹方-简';
+  font-weight: 100;
+  margin-top: 30px;
+  line-height: 45px;
+  text-align: left;
+  position: relative;
+}
+
+.block03 {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  position: relative;
+}
+.block03 .content {
+  padding-top: 100px;
+  max-width: 1680px;
+  min-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+.block03 .content .left {
+  width: 780px;
+  float: left;
+}
+.block03 .content .left .title {
+  width: 100%;
+  height: auto;
+  font-size: 100px;
+  font-family: '苹方-简';
+  font-weight: 500;
+  text-align: left;
+}
+.block03 .content .left .word {
+  width: auto;
+  height: auto;
+  font-size: 30px;
+  font-family: '苹方-简';
+  font-weight: 100;
+  margin-top: 30px;
+  line-height: 45px;
+  text-align: left;
+}
+.block03 .content .left .movie_btn {
+  width: 480px;
+  height: 110px;
+  display: block;
+  float: left;
+  margin-top: -20px;
+  background: url("../images/movie_btn.png");
+  transition: all 0.5s;
+}
+.block03 .content .left .movie_btn:hover {
+  background: url("../images/movie_btn_hover.png") no-repeat;
+}
+.block03 .content .right {
+  width: 650px;
+  float: right;
+  position: relative;
+}
+.block03 .content .right .sportImg {
+  position: absolute;
+  width: 672px;
+  height: 1168px;
+  background: url("../images/player.png") no-repeat center;
+  background-size: 90%;
+  top: -500px;
+  left: -120px;
+  transition: all 0.5s;
+}
+
+.footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+}
+.footer .footer_01 {
+  width: 100%;
+  height: 120px;
+  display: block;
+  float: left;
+  background: white;
+}
+.footer .footer_01 .about_dot {
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  transform: translateY(-50%);
+  top: 50%;
+  text-align: center;
+  color: #333333;
+  font-size: 18px;
+  font-weight: 100;
+  line-height: 27px;
+  letter-spacing: 1px;
+}
+.footer .footer_02 {
+  width: 100%;
+  height: 40px;
+  display: block;
+  float: left;
+  text-align: center;
+  line-height: 40px;
+  color: #999999;
+  font-family: '苹方-简';
+  font-weight: 100;
+  background: #333333;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+
+.pop_outline_00 {
+  width: 100%;
+  min-width: 1200px;
+  height: 100%;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 999;
+  display: none;
+}
+
+.gotop {
+  width: 76px;
+  height: 80px;
+  display: block;
+  background: rgba(102, 102, 102, 0.8);
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 20;
+  padding: 0 2px;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 1s;
+}
+
+.hide {
+  display: none !important;
+}
+
+@-webkit-keyframes phoneBgSlide02 {
+  0% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(217px);
+    transform: translateX(217px);
+  }
+}
+@keyframes phoneBgSlide02 {
+  0% {
+    -webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(217px);
+    -ms-transform: translateX(217px);
+    transform: translateX(217px);
+  }
+}
+.phoneBgSlide02 {
+  -webkit-animation-name: phoneBgSlide02;
+  animation-name: phoneBgSlide02;
+}
+
+@-webkit-keyframes phoneBgSlide03 {
+  0% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(434px);
+    transform: translateX(434px);
+  }
+}
+@keyframes phoneBgSlide03 {
+  0% {
+    -webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(434px);
+    -ms-transform: translateX(434px);
+    transform: translateX(434px);
+  }
+}
+.phoneBgSlide03 {
+  -webkit-animation-name: phoneBgSlide03;
+  animation-name: phoneBgSlide03;
+}

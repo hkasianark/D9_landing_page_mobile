@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>fullPage.js — 绑定菜单演示_www.zjgsq.com</title>
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <style>
+    #menu {
+        margin: 0;
+        padding: 0;
+        position: fixed;
+        left: 10px;
+        top: 10px;
+        list-style-type: none;
+        z-index: 70;
+    }
+
+    #menu li {
+        float: left;
+        margin: 0 10px 0 0;
+        font-size: 14px;
+    }
+
+    #menu a {
+        float: left;
+        padding: 10px 20px;
+        background-color: #fff;
+        color: #333;
+        text-decoration: none;
+    }
+
+    #menu .active a {
+        color: #fff;
+        background-color: #333;
+    }
+
+    .section {
+        text-align: center;
+        font: 50px "Microsoft Yahei";
+        color: #fff;
+    }
+    </style>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.min.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+    <script src="js/wow.min.js"></script>	
+    <script>
+    $(document).ready(function() {
+
+
+        var leaveIndex = '';
+        var leaveIndex_g = '';
+
+
+        $.fn.fullpage({
+            slidesColor: ['#000', '#fff', '#000', '#f90'],
+            anchors: ['page1', 'page2', 'page3', 'page4'],
+            menu: '#menu',
+
+
+            afterLoad: function(anchorLink, index){
+
+                console.log(index)
+                console.log(leaveIndex)
+                console.log(leaveIndex_g)
+
+
+                if( index == 1 ){
+
+                    $('.logoBlock').addClass("animated fadeInDown").removeClass('hide');
+                    $('.logo_sub').addClass("animated fadeInLeftBig");
+                    $('.logo_line').addClass("animated fadeInUp");
+
+                    $('.gotop').css('opacity', '0');
+
+
+                    $('.phoneBg02').removeClass("animated phoneBgSlide02");
+                    $('.phoneBg03').removeClass("animated phoneBgSlide03");
+                    $('.block02_word').removeClass("animated fadeInUp").addClass('hide');
+                    $('.block03_word').removeClass("animated fadeInUp").addClass('hide');
+                }
+                if( index == 2 ){
+                    $('.phoneBg02').addClass("animated phoneBgSlide02");
+                    $('.phoneBg03').addClass("animated phoneBgSlide03");
+                    $('.block02_word').addClass("animated fadeInUp").removeClass('hide');
+                    
+
+                    $('.gotop').css('opacity', '1');
+
+
+                    $('.logoBlock').removeClass("animated fadeInDown").addClass('hide');
+                    $('.logo_sub').removeClass("animated fadeInLeftBig");
+                    $('.logo_line').removeClass("animated fadeInLeft");
+                    $('.block03_word').removeClass("animated fadeInUp").addClass('hide');
+                }
+                if( index == 3 ){
+                    $('.block03_word').addClass("animated fadeInUp").removeClass('hide');
+
+                    $('.logoBlock').removeClass("animated fadeInDown").addClass('hide');
+                    $('.logo_sub').removeClass("animated fadeInLeftBig");
+                    $('.logo_line').removeClass("animated fadeInUp");
+
+                    $('.gotop').css('opacity', '1');
+
+                    $('.phoneBg02').removeClass("animated phoneBgSlide02");
+                    $('.phoneBg03').removeClass("animated phoneBgSlide03");
+                    $('.block02_word').removeClass("animated fadeInUp").addClass('hide');
+                }
+                
+
+
+
+
+            },
+
+			onLeave: function(index, nextIndex, direction){
+				// console.log(index , nextIndex , direction); 
+
+                leaveIndex = index
+                leaveIndex_g = nextIndex
+
+				var leavingSection = $(this);
+
+				//after leaving section 2
+				if (index == 1 && nextIndex == 'down' ){
+
+					console.log(" 1 -> 2 ");
+					 
+				}
+
+				else if (index == 2 && nextIndex == 'down'){
+
+					console.log(" 2 -> 3 ");
+
+
+				}
+
+				else if( index == 3 && nextIndex == 'up'){
+
+					console.log(" 3 -> 2 ");
+
+
+				}
+
+
+
+				else if( index == 2 && nextIndex == 'up' ){
+
+					console.log(" 2 -> 1 ");
+
+				}
+
+
+			}
+
+
+        });
+
+		$(function () {
+		  function videoPlay() {
+		    $('video').each(function (i, e) {
+		      $('video').get(i).play();
+		    });
+		  }
+		  videoPlay();
+		});
+
+		$(function() {
+	        $("#movie_btn").click(function() {
+	        	console.log('456')
+	            $("#movie").fadeIn();
+	        });
+	        $("#cancel_btn").click(function() {
+	            $("#movie").fadeOut();
+	        });
+    	});
+
+
+
+
+
+    });
+    var wow = new WOW({ 
+　　　　boxClass: 'wow', 
+　　　　animateClass: 'animated', 
+　　　　offset: 0, 
+　　　　mobile: true, 
+　　　　live: true 
+　　}); 
+　　wow.init();
+    </script>
+</head>
+
+<body>
+    <ul id="menu">
+        <li data-menuanchor="page1" class="active"><a href="#page1">视 频</a></li>
+        <li data-menuanchor="page2"><a href="#page2">点 球</a></li>
+        <li data-menuanchor="page3"><a href="#page3">世 界 杯</a></li>
+        <li data-menuanchor="page4"><a href="#page4">立即下载</a></li>
+    </ul>
+    <!--第一层 開始-->
+    <div class="section" id="section0">
+        <div class="block01">
+            <div class="top"></div>
+            <video width="100%" height="auto" autoplay loop style="position: absolute; top: 0; left: 0; ">
+                <source src="media/soccer_web_small.mp4" type="video/mp4">
+            </video>
+            <div class="logo_wrpa">
+                <div class="logoBlock animated fadeInDown" style="animation-delay: 0s">
+                    <div class="logo_sub animated fadeInLeftBig" style="animation-delay: 0.6s">脚踏点球，称霸足球</div>
+                    <div class="logo_line animated fadeInUp" style="animation-delay: 1s"></div>
+                </div>
+            </div>
+            <div class="button"><a href="#page2"></a></div>
+        </div>
+    </div>
+    <!--第一层 结束-->
+	
+	<!--第二层 開始-->
+    <div class="section" id="section1">
+		<div class="block02">
+			<div class="content">
+				<dis class="left">
+					<div class="phoneBg01 phoneBg" style="animation-delay: 0s"></div>
+                    <div class="phoneBg02 phoneBg" style="animation-delay: 0s"></div>
+                    <div class="phoneBg03 phoneBg" style="animation-delay: 0s"></div>
+					<a href="download.html" class="btn" id="goToDownlaod">立即下载</a>
+				</dis>
+				<dis class="right">
+					<div class="title">点球零距离...</div>
+					<div class="word block02_word hide" style="animation-delay: .8s">
+						在这个移动互联网的时代，<br/>
+						不能支持手机的应用，能算应用吗?<br/><br/>
+						原生态应用，<br/>
+						让你任何时刻任何地点，一机在手，无限点球 !!
+					</div>
+				</dis>
+			</div>
+			
+		</div>
+    </div>
+    <!--第二层 结束-->
+
+	<!--第三层 開始-->
+	<div class="section" id="section2">
+	    <div class="block03">
+	        <div class="content">
+	            <div class="left">
+	                <div class="title">举足备战2018...</div>
+	                <div class="word block03_word hide" style="animation-delay: .5s">
+						足球，世界上最多人热爱的运动;
+						<br>世界杯，足球领域里最盛大的顶级赛事;
+						<br>点球，最让人热血沸腾的情境。
+						<br>
+						<br>拿起你的手机，
+						<br>与点球一起迎接这四年一度足球界最高端的顶级赛事，
+						<br>2018俄罗斯世界杯足球赛，就在点球!
+	                </div>
+	                <div id="movie_btn" class="movie_btn" style="margin-top:50px;float:left;cursor:pointer;text-decoration:none;"></div>
+	            </div>
+	            <div class="right"><div class="sportImg" style="animation-delay: 0s"></div></div>
+	        </div>
+	        <div class="footer">
+                <div class="footer_01">
+                    <div class="about_dot">点球是一家年轻而快速成长的公司，
+                        <br>我们致力于提供最稳定，最快速，最具娱乐性的服务以及最尊荣的客户服务。
+                        <br>若您热爱足球，绝不能错过点球，无论是常规的联赛，还是动人心弦的各种杯赛，点球与您一起渡过每个看球的夜晚。</div>
+                </div>
+                <div class="footer_02">© Copyright 2017 By 点球. All Rights Reserved.</div>
+	        </div>
+	    </div>
+	</div>
+	<!--第三层 结束-->
+
+    <!--广告 开始-->
+    <div id="movie" class="pop_outline_00">
+        <div style="width:800px;height:auto;display:block;margin:0 auto;position:relative;transform:translateY(-50%);top:50%;">
+            <iframe height='480' width='720' src='https://player.youku.com/embed/XMzE5ODAxOTU4OA==' frameborder=0></iframe>
+            <div style="position:relative;display:block;float:right;right:55px;margin-top:-22px;cursor:pointer;" id="cancel_btn"><img src="images/cancel.png" width="51." height="51.2" alt="" /></div>
+        </div>
+    </div>
+    <!--广告 结束-->
+
+    <!--gototop 開始-->
+    <a href="#page1" class="cd-top gotop" id="gotop"><img src="images/gototop.png" width="76" height="80" alt=""/></a>
+    <!--gototop 結束-->
+
+</body>
+
+</html>
